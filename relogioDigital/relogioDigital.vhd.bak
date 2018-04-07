@@ -1,0 +1,54 @@
+-- Somador decimal em VHDL
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity relogioDigital is
+	port (a, b		: in  std_logic_vector(3 downto 0);
+			vem_um	: in  std_logic;
+			s			: out std_logic_vector(3 downto 0);
+			vai_um	: out std_logic);
+
+end relogioDigital;
+
+architecture of relogioDigital is
+	
+	-- Sinais internos
+	signal s_soma : std_logic_vector(3 downto 0);
+	signal s_cout, s_corrige : std_logic;
+	
+	-- Componentes de acordo com a interface padrão
+	component somador_4bits is
+		port (a, b	: in  std_logic_vector(3 downto 0);
+				c0		: in  std_logic;
+				s		: out std_logic_vector(3 downto 0);
+				c4		: out std_logic);
+	end component;
+	
+	
+	component gera_vai_um is
+		port (soma	: in  std_logic_vector(3 downto 0);
+				cout	: in  std_logic;
+				vai_um: out std_logic);
+	end component;
+	
+	
+	component soma6 is
+		port (entrada	: in  std_logic_vector(3 downto 0);
+				corrige	: in  std_logic;
+				saida		: out std_logic_vector(3 downto 0));
+	end component;
+
+begin
+	-- Bloco 1: Somador binário
+	Bloco_1: somador_4bits port map(a, b, vem_um, s_soma, s_cout);
+	
+	-- Bloco 2: Gera vai um
+	Bloco_2: gera_vai_um port map(s_soma, s_cout, s_corrige);
+	
+	vai_um <= s_corrige; -- sinal intermediário associado ao vai_um
+	
+	-- Bloco: Soma 6
+	Bloco_3: soma6 port map(s_soma, s_corrige, s);
+	
+end architecture;
