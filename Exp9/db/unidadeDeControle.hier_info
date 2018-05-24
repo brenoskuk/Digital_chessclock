@@ -1,0 +1,35 @@
+|unidadeDeControle
+clock => tB1.CLK
+clock => tB0.CLK
+clock => t.CLK
+clock => MS1~4.DATAIN
+clock => MS0~4.DATAIN
+clock => MG~6.DATAIN
+reset => MS1.bronstein.OUTPUTSELECT
+reset => MS1.fisher.OUTPUTSELECT
+reset => MS1.normal.OUTPUTSELECT
+reset => MS0.estavel.OUTPUTSELECT
+reset => MS0.decrementa.OUTPUTSELECT
+reset => MS0.incrementa.OUTPUTSELECT
+reset => MG~8.DATAIN
+reset => t.ENA
+reset => tB0.ENA
+reset => tB1.ENA
+start => t.OUTPUTSELECT
+start => process_0.IN1
+start => t.OUTPUTSELECT
+B0 => tB0.OUTPUTSELECT
+B0 => process_0.IN1
+B0 => tB0.OUTPUTSELECT
+B1 => tB1.OUTPUTSELECT
+B1 => process_0.IN1
+B1 => tB1.OUTPUTSELECT
+saida[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saidaS0[0] <= saidaS0[0].DB_MAX_OUTPUT_PORT_TYPE
+saidaS0[1] <= saidaS0[1].DB_MAX_OUTPUT_PORT_TYPE
+saidaS1[0] <= saidaS1[0].DB_MAX_OUTPUT_PORT_TYPE
+saidaS1[1] <= saidaS1[1].DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,20 @@
+
+State Machine - |unidadeDeControle|MS1
+Name MS1.bronstein MS1.fisher MS1.normal 
+MS1.normal 0 0 0 
+MS1.fisher 0 1 1 
+MS1.bronstein 1 0 1 
+
+State Machine - |unidadeDeControle|MS0
+Name MS0.estavel MS0.decrementa MS0.incrementa 
+MS0.incrementa 0 0 0 
+MS0.decrementa 0 1 1 
+MS0.estavel 1 0 1 
+
+State Machine - |unidadeDeControle|MG
+Name MG.PAUSA MG.JOGO MG.S2 MG.S1 MG.S0 
+MG.S0 0 0 0 0 0 
+MG.S1 0 0 0 1 1 
+MG.S2 0 0 1 0 1 
+MG.JOGO 0 1 0 0 1 
+MG.PAUSA 1 0 0 0 1 

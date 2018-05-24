@@ -11,7 +11,7 @@ entity unidadeDeControle is
 		  B0 			: in std_logic;
 		  B1 			: in std_logic;		
 		  saida   	: out std_logic_vector(2 downto 0);
-		  saidaS0	: out std_logic_vector(1 downto 0);
+		  saidaS0	: out std_logic;
 		  saidaS1	: out std_logic_vector(1 downto 0)
 		 );	 
 end unidadeDeControle;			
@@ -19,7 +19,7 @@ end unidadeDeControle;
 architecture comportamental of unidadeDeControle is
 TYPE transition 		is (baixo, alto);
 TYPE State_type 		is (S0, S1, S2, JOGO, PAUSA);
-TYPE subStateS0		is (incrementa, decrementa, estavel);
+TYPE subStateS0		is (incrementa, decrementa);
 type subStateS1		is (normal, fisher, bronstein);
 signal t : transition;
 signal tB1: transition;
@@ -89,7 +89,7 @@ begin
 			
 			-- MSO eh a submaquina de estados de S0
 			case MS0 IS
-				when estavel =>
+				when decrementa =>
 					if B1 = '1' and tB1 = alto then
 						MS0 <= incrementa;
 					end if;
@@ -97,12 +97,11 @@ begin
 						MS0 <= decrementa;
 					end if;
 				when incrementa =>
-					if tB1 = baixo then
-						MS0 <= estavel;
+					if B1 = '1' and tB1 = alto then
+						MS0 <= incrementa;
 					end if;
-				when decrementa =>
-					if  tB0 = baixo then
-						MS0 <= estavel;
+					if B0 = '1' and tB0 = alto then
+						MS0 <= decrementa;
 					end if;
 				-- AO LINKAR COM O FLUXO DE DADOS TEM Q ADD ESTADO TEMPRARIO
 			end case;
@@ -151,9 +150,9 @@ begin
 					
 		with MS0 select
 		
-		saidaS0 <= 	"00" when incrementa,
-						"01" when decrementa,
-						"10" when estavel;
+		saidaS0 <= 	'1' when incrementa,
+						'0' when decrementa;
+						
 		with MS1 select
 		
 		saidaS1 <= "00" when normal,
