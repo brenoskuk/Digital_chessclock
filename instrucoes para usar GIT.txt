@@ -1,0 +1,20 @@
+**Para baixar ultima versão:
+
+
+git push
+
+
+
+**Para atualizar a sua versão:
+
+git add * (se quiser atualizar todas as pastas)
+
+
+git add \caminho\caminho... (se quiser atualizar uma pasta especifica)
+
+
+git commit -m "COMENTARIO DO QUE VOCE FEZ"
+
+git push 
+
+Se não tiver conflitos ele vai fazer de boa
