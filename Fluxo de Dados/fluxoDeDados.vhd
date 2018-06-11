@@ -96,8 +96,12 @@ architecture fluxo of fluxoDeDados is
 	
 	signal soma_F1C	:	std_logic_vector(3 downto 0);
 	signal soma_F1D	:	std_logic_vector(3 downto 0);
+	signal soma_F1E	:	std_logic_vector(3 downto 0);
+	signal soma_F1F	:	std_logic_vector(3 downto 0);
 	signal soma_F2C	:	std_logic_vector(3 downto 0);
 	signal soma_F2D	:	std_logic_vector(3 downto 0);
+	signal soma_F2E	:	std_logic_vector(3 downto 0);
+	signal soma_F2F	:	std_logic_vector(3 downto 0);
 	signal soma_B1C	:	std_logic_vector(3 downto 0);
 	signal soma_B1D	:	std_logic_vector(3 downto 0);
 	signal soma_B2C	:	std_logic_vector(3 downto 0);
@@ -124,8 +128,13 @@ architecture fluxo of fluxoDeDados is
 	
 	signal rco_B1	:	std_logic;
 	signal rco_B2	:	std_logic;
-	signal rco_F1	:	std_logic;
-	signal rco_F2	:	std_logic;
+	
+	signal rco_F1C	:	std_logic;
+	signal rco_F1D	:	std_logic;
+	signal rco_F1E	:	std_logic;
+	signal rco_F2C	:	std_logic;
+	signal rco_F2D	:	std_logic;
+	signal rco_F2E :	std_logic;
 		
 	
 	
@@ -186,7 +195,30 @@ architecture fluxo of fluxoDeDados is
 			cout	:	out std_logic);
 	end component;
 
+	component somador6 is
+		port ( 
+			a		:	in std_logic_vector(3 downto 0);
+			cin	:  in std_logic;
+			saida	:	out std_logic_vector(3 downto 0);
+			cout	:	out std_logic);
+	end component;
+	
 begin 
+
+
+-- INICIO: LOGICA PARA SELECAO DE TEMPO INICIAL
+	
+	
+	--sel_Tempo0: contadorDecadaUpDown port map(clk, '0',  preset ,'0', 
+														--not(seletor) and enable and rco1A and rco1B and rco1C and rco1D, load1E, rco1E, s_saida1E);
+														
+	--sel_Tempo1: contador6 port map(clk, '0',  preset ,'0', 
+														--not(seletor) and enable and rco1A and rco1B and rco1C and rco1D and rco1E, load1F, open, s_saida1F);
+   
+-- FIM: LOGICA PARA SELECAO DE TEMPO INICIAL
+
+
+
 
 -- INICIO: LOGICA PARA O INCREMENTO DO METODO SELECIONADO 
 	
@@ -195,20 +227,30 @@ begin
 		--somadores FISCHER C:  deve somar a s_saidaC (segundos) com DELTA. Pode haver rco
 	
 		--Jogador 1 saida dos segundos (1C)
-	somadorF1: somadorBCD port map(s_saida1C, "0101", '0',soma_F1C, rco_F1);
+	somadorF1: somadorBCD port map(s_saida1C, "0101", '0',soma_F1C, rco_F1C);
 		--Jogador 2 saida dos segundos (2C)
-	somadorF2: somadorBCD port map(s_saida2C, "0101", '0',soma_F2C, rco_F2);
+	somadorF2: somadorBCD port map(s_saida2C, "0101", '0',soma_F2C, rco_F2C);
 	
 		--somadores FISCHER D: deve somar a s_saidaD (segundos) com eventual RCO 	
 	
-		--Jogador 1 saida dos minutos (1D)
-	somadorF3: somadorBCD port map(s_saida1D, "0000", rco_F1,soma_F1D, open);
-		--Jogador 2 saida dos minutos (2D)
-	somadorF4: somadorBCD port map(s_saida2D, "0000", rco_F2,soma_F2D, open);
+		--Jogador 1 saida da dezena de segundos (1D)
+	somadorF3: somador6 port map(s_saida1D, rco_F1C, soma_F1D, rco_F1D);
+		--Jogador 2 saida da dezena de segundos (2D)
+	somadorF4: somador6 port map(s_saida2D, rco_F2C, soma_F2D, rco_F2D);
 	
+			--Jogador 1 saida dos minutos (1E)
+	somadorF5: somadorBCD port map(s_saida1E, "0000", rco_F1D, soma_F1E, rco_F1E);
+			--Jogador 2 saida dos minutis (2E)
+	somadorF6: somadorBCD port map(s_saida2E, "0000", rco_F2D, soma_F2E, rco_F2E);
 	
-	--BRONSTEIN
+
+	--Jogador 1 saida da dezena de minutos (1F)
+	somadorF7: somador6 port map(s_saida1E, rco_F1E,soma_F1D, open);
+		--Jogador 2 saida da dezena de segundos (2F)
+	somadorF8: somador6 port map(s_saida2E, rco_F2E,soma_F2D, open);
 	
+
+	--BRONSTEIN	
 	
 	-- Contadores para o metodo de BRONSTEIN: sempre que a vez do jogador comeca devem contar ate o delta selecionado
 

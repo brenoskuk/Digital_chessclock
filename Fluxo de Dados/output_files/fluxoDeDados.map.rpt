@@ -1,5 +1,5 @@
 Analysis & Synthesis report for fluxoDeDados
-Mon Jun 11 09:55:30 2018
+Mon Jun 11 10:51:18 2018
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -10,39 +10,7 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: divisorDeClock:CLOCK_DIV
- 12. Port Connectivity Checks: "contador6:Bloco_2F"
- 13. Port Connectivity Checks: "contadorDecadaUpDown:Bloco_2E"
- 14. Port Connectivity Checks: "contadorDecadaUpDown:Bloco_2D"
- 15. Port Connectivity Checks: "contadorDecadaUpDown:Bloco_2C"
- 16. Port Connectivity Checks: "contadorDecadaUpDown:Bloco_2B"
- 17. Port Connectivity Checks: "contadorDecadaUpDown:Bloco_2A"
- 18. Port Connectivity Checks: "contador6:Bloco_1F"
- 19. Port Connectivity Checks: "contadorDecadaUpDown:Bloco_1E"
- 20. Port Connectivity Checks: "contador6:Bloco_1D"
- 21. Port Connectivity Checks: "contadorDecadaUpDown:Bloco_1C"
- 22. Port Connectivity Checks: "contadorDecadaUpDown:Bloco_1B"
- 23. Port Connectivity Checks: "contadorDecadaUpDown:Bloco_1A"
- 24. Port Connectivity Checks: "divisorDeClock:CLOCK_DIV"
- 25. Port Connectivity Checks: "somadorBCD:somadorB4"
- 26. Port Connectivity Checks: "somadorBCD:somadorB3"
- 27. Port Connectivity Checks: "somadorBCD:somadorB2"
- 28. Port Connectivity Checks: "somadorBCD:somadorB1"
- 29. Port Connectivity Checks: "contadorDecadaUpDown:Bloco_3B"
- 30. Port Connectivity Checks: "contadorDecadaUpDown:Bloco_3A"
- 31. Port Connectivity Checks: "somadorBCD:somadorF4"
- 32. Port Connectivity Checks: "somadorBCD:somadorF3"
- 33. Port Connectivity Checks: "somadorBCD:somadorF2"
- 34. Port Connectivity Checks: "somadorBCD:somadorF1"
- 35. Post-Synthesis Netlist Statistics for Top Partition
- 36. Elapsed Time Per Partition
- 37. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -66,27 +34,22 @@ agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Jun 11 09:55:30 2018       ;
-; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
-; Revision Name                   ; fluxoDeDados                                ;
-; Top-level Entity Name           ; fluxoDeDados                                ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 58                                          ;
-; Total pins                      ; 56                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Mon Jun 11 10:51:18 2018           ;
+; Quartus Prime Version       ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
+; Revision Name               ; fluxoDeDados                                ;
+; Top-level Entity Name       ; fluxoDeDados                                ;
+; Family                      ; Cyclone V                                   ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
+; Total registers             ; N/A until Partition Merge                   ;
+; Total pins                  ; N/A until Partition Merge                   ;
+; Total virtual pins          ; N/A until Partition Merge                   ;
+; Total block memory bits     ; N/A until Partition Merge                   ;
+; Total PLLs                  ; N/A until Partition Merge                   ;
+; Total DLLs                  ; N/A until Partition Merge                   ;
++-----------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -185,425 +148,11 @@ agreement for further details.
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                               ;
-+----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                                  ; Library ;
-+----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------------------+---------+
-; somadorBCD.vhd                   ; yes             ; User VHDL File        ; C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/somadorBCD.vhd           ;         ;
-; fluxodedados.vhd                 ; yes             ; Auto-Found VHDL File  ; C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd         ;         ;
-; contadordecadaupdown.vhd         ; yes             ; Auto-Found VHDL File  ; C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/contadordecadaupdown.vhd ;         ;
-; divisordeclock.vhd               ; yes             ; Auto-Found VHDL File  ; C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/divisordeclock.vhd       ;         ;
-; contador6.vhd                    ; yes             ; Auto-Found VHDL File  ; C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/contador6.vhd            ;         ;
-; setesegmentos.vhd                ; yes             ; Auto-Found VHDL File  ; C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/setesegmentos.vhd        ;         ;
-+----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------------------+---------+
-
-
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 99        ;
-;                                             ;           ;
-; Combinational ALUT usage for logic          ; 150       ;
-;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 47        ;
-;     -- 5 input functions                    ; 19        ;
-;     -- 4 input functions                    ; 51        ;
-;     -- <=3 input functions                  ; 33        ;
-;                                             ;           ;
-; Dedicated logic registers                   ; 58        ;
-;                                             ;           ;
-; I/O pins                                    ; 56        ;
-;                                             ;           ;
-; Total DSP Blocks                            ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 46        ;
-; Total fan-out                               ; 886       ;
-; Average fan-out                             ; 2.77      ;
-+---------------------------------------------+-----------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                             ;
-+------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------+----------------------+--------------+
-; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                         ; Entity Name          ; Library Name ;
-+------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------+----------------------+--------------+
-; |fluxoDeDados                      ; 150 (35)            ; 58 (0)                    ; 0                 ; 0          ; 56   ; 0            ; |fluxoDeDados                               ; fluxoDeDados         ; work         ;
-;    |contador6:Bloco_1D|            ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |fluxoDeDados|contador6:Bloco_1D            ; contador6            ; work         ;
-;    |contador6:Bloco_2F|            ; 7 (7)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |fluxoDeDados|contador6:Bloco_2F            ; contador6            ; work         ;
-;    |contadorDecadaUpDown:Bloco_1A| ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |fluxoDeDados|contadorDecadaUpDown:Bloco_1A ; contadorDecadaUpDown ; work         ;
-;    |contadorDecadaUpDown:Bloco_1B| ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |fluxoDeDados|contadorDecadaUpDown:Bloco_1B ; contadorDecadaUpDown ; work         ;
-;    |contadorDecadaUpDown:Bloco_1C| ; 6 (6)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |fluxoDeDados|contadorDecadaUpDown:Bloco_1C ; contadorDecadaUpDown ; work         ;
-;    |contadorDecadaUpDown:Bloco_2A| ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |fluxoDeDados|contadorDecadaUpDown:Bloco_2A ; contadorDecadaUpDown ; work         ;
-;    |contadorDecadaUpDown:Bloco_2B| ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |fluxoDeDados|contadorDecadaUpDown:Bloco_2B ; contadorDecadaUpDown ; work         ;
-;    |contadorDecadaUpDown:Bloco_2C| ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |fluxoDeDados|contadorDecadaUpDown:Bloco_2C ; contadorDecadaUpDown ; work         ;
-;    |contadorDecadaUpDown:Bloco_2D| ; 6 (6)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |fluxoDeDados|contadorDecadaUpDown:Bloco_2D ; contadorDecadaUpDown ; work         ;
-;    |contadorDecadaUpDown:Bloco_2E| ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |fluxoDeDados|contadorDecadaUpDown:Bloco_2E ; contadorDecadaUpDown ; work         ;
-;    |divisorDeClock:CLOCK_DIV|      ; 25 (25)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |fluxoDeDados|divisorDeClock:CLOCK_DIV      ; divisorDeClock       ; work         ;
-;    |setesegmentos:Bloco_D1|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fluxoDeDados|setesegmentos:Bloco_D1        ; setesegmentos        ; work         ;
-;    |setesegmentos:Bloco_D2|        ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fluxoDeDados|setesegmentos:Bloco_D2        ; setesegmentos        ; work         ;
-;    |setesegmentos:Bloco_D3|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fluxoDeDados|setesegmentos:Bloco_D3        ; setesegmentos        ; work         ;
-;    |setesegmentos:Bloco_D4|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fluxoDeDados|setesegmentos:Bloco_D4        ; setesegmentos        ; work         ;
-;    |setesegmentos:Bloco_D5|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fluxoDeDados|setesegmentos:Bloco_D5        ; setesegmentos        ; work         ;
-;    |setesegmentos:Bloco_D6|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fluxoDeDados|setesegmentos:Bloco_D6        ; setesegmentos        ; work         ;
-+------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------+----------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; contador6:Bloco_2F|temp[3]            ; Stuck at GND due to stuck port data_in ;
-; contador6:Bloco_1D|temp[3]            ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 2 ;                                        ;
-+---------------------------------------+----------------------------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 58    ;
-; Number of registers using Synchronous Clear  ; 19    ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |fluxoDeDados|contadorDecadaUpDown:Bloco_2A|temp[3] ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |fluxoDeDados|contadorDecadaUpDown:Bloco_1A|temp[3] ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |fluxoDeDados|contadorDecadaUpDown:Bloco_2B|temp[3] ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |fluxoDeDados|contadorDecadaUpDown:Bloco_1B|temp[2] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |fluxoDeDados|s_D3[3]                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
-
-
-+-----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: divisorDeClock:CLOCK_DIV ;
-+----------------+----------+-------------------------------------------+
-; Parameter Name ; Value    ; Type                                      ;
-+----------------+----------+-------------------------------------------+
-; DIV1Hz         ; 50000000 ; Signed Integer                            ;
-; DIV100Hz       ; 500000   ; Signed Integer                            ;
-; DIV1KHz        ; 50000    ; Signed Integer                            ;
-; DIV440Hz       ; 113636   ; Signed Integer                            ;
-; DIV1760Hz      ; 20409    ; Signed Integer                            ;
-+----------------+----------+-------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "contador6:Bloco_2F"                                                                  ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; clear ; Input  ; Info     ; Stuck at GND                                                                        ;
-; dir   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; rco   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------+
-; Port Connectivity Checks: "contadorDecadaUpDown:Bloco_2E" ;
-+-------+-------+----------+--------------------------------+
-; Port  ; Type  ; Severity ; Details                        ;
-+-------+-------+----------+--------------------------------+
-; clear ; Input ; Info     ; Stuck at GND                   ;
-; dir   ; Input ; Info     ; Stuck at GND                   ;
-+-------+-------+----------+--------------------------------+
-
-
-+-----------------------------------------------------------+
-; Port Connectivity Checks: "contadorDecadaUpDown:Bloco_2D" ;
-+-------+-------+----------+--------------------------------+
-; Port  ; Type  ; Severity ; Details                        ;
-+-------+-------+----------+--------------------------------+
-; clear ; Input ; Info     ; Stuck at GND                   ;
-; dir   ; Input ; Info     ; Stuck at GND                   ;
-+-------+-------+----------+--------------------------------+
-
-
-+-----------------------------------------------------------+
-; Port Connectivity Checks: "contadorDecadaUpDown:Bloco_2C" ;
-+-------+-------+----------+--------------------------------+
-; Port  ; Type  ; Severity ; Details                        ;
-+-------+-------+----------+--------------------------------+
-; clear ; Input ; Info     ; Stuck at GND                   ;
-; dir   ; Input ; Info     ; Stuck at GND                   ;
-+-------+-------+----------+--------------------------------+
-
-
-+-----------------------------------------------------------+
-; Port Connectivity Checks: "contadorDecadaUpDown:Bloco_2B" ;
-+-------+-------+----------+--------------------------------+
-; Port  ; Type  ; Severity ; Details                        ;
-+-------+-------+----------+--------------------------------+
-; clear ; Input ; Info     ; Stuck at GND                   ;
-; dir   ; Input ; Info     ; Stuck at GND                   ;
-; data  ; Input ; Info     ; Stuck at GND                   ;
-+-------+-------+----------+--------------------------------+
-
-
-+-----------------------------------------------------------+
-; Port Connectivity Checks: "contadorDecadaUpDown:Bloco_2A" ;
-+-------+-------+----------+--------------------------------+
-; Port  ; Type  ; Severity ; Details                        ;
-+-------+-------+----------+--------------------------------+
-; clear ; Input ; Info     ; Stuck at GND                   ;
-; dir   ; Input ; Info     ; Stuck at GND                   ;
-; data  ; Input ; Info     ; Stuck at GND                   ;
-+-------+-------+----------+--------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "contador6:Bloco_1F"                                                                  ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; clear ; Input  ; Info     ; Stuck at GND                                                                        ;
-; dir   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; rco   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "contadorDecadaUpDown:Bloco_1E"                                                       ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; clear ; Input  ; Info     ; Stuck at GND                                                                        ;
-; dir   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------+
-; Port Connectivity Checks: "contador6:Bloco_1D" ;
-+-------+-------+----------+---------------------+
-; Port  ; Type  ; Severity ; Details             ;
-+-------+-------+----------+---------------------+
-; clear ; Input ; Info     ; Stuck at GND        ;
-; dir   ; Input ; Info     ; Stuck at GND        ;
-+-------+-------+----------+---------------------+
-
-
-+-----------------------------------------------------------+
-; Port Connectivity Checks: "contadorDecadaUpDown:Bloco_1C" ;
-+-------+-------+----------+--------------------------------+
-; Port  ; Type  ; Severity ; Details                        ;
-+-------+-------+----------+--------------------------------+
-; clear ; Input ; Info     ; Stuck at GND                   ;
-; dir   ; Input ; Info     ; Stuck at GND                   ;
-+-------+-------+----------+--------------------------------+
-
-
-+-----------------------------------------------------------+
-; Port Connectivity Checks: "contadorDecadaUpDown:Bloco_1B" ;
-+-------+-------+----------+--------------------------------+
-; Port  ; Type  ; Severity ; Details                        ;
-+-------+-------+----------+--------------------------------+
-; clear ; Input ; Info     ; Stuck at GND                   ;
-; dir   ; Input ; Info     ; Stuck at GND                   ;
-; data  ; Input ; Info     ; Stuck at GND                   ;
-+-------+-------+----------+--------------------------------+
-
-
-+-----------------------------------------------------------+
-; Port Connectivity Checks: "contadorDecadaUpDown:Bloco_1A" ;
-+-------+-------+----------+--------------------------------+
-; Port  ; Type  ; Severity ; Details                        ;
-+-------+-------+----------+--------------------------------+
-; clear ; Input ; Info     ; Stuck at GND                   ;
-; dir   ; Input ; Info     ; Stuck at GND                   ;
-; data  ; Input ; Info     ; Stuck at GND                   ;
-+-------+-------+----------+--------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "divisorDeClock:CLOCK_DIV"                                                                   ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port         ; Type   ; Severity ; Details                                                                             ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; clkout1hz    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; clkout1khz   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; clkout440hz  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; clkout1760hz ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "somadorBCD:somadorB4"                                                                ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; b     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; saida ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; cout  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "somadorBCD:somadorB3"                                                                ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; b     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; saida ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; cout  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "somadorBCD:somadorB2"                                                                ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; cin   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; saida ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "somadorBCD:somadorB1"                                                                ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; cin   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; saida ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "contadorDecadaUpDown:Bloco_3B"                                                        ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; load   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; dir    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; data   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; rco    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "contadorDecadaUpDown:Bloco_3A"                                                        ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; load   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; dir    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; data   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; rco    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "somadorBCD:somadorF4"                                                                ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; b     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; saida ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; cout  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "somadorBCD:somadorF3"                                                                ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; b     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; saida ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; cout  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "somadorBCD:somadorF2"                                                                ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; b[3]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; b[2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; b[1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; b[0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; cin   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; saida ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "somadorBCD:somadorF1"                                                                ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; b[3]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; b[2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; b[1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; b[0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; cin   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; saida ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 58                          ;
-;     SCLR              ; 19                          ;
-;     plain             ; 39                          ;
-; arriav_lcell_comb     ; 160                         ;
-;     arith             ; 19                          ;
-;         1 data inputs ; 19                          ;
-;     normal            ; 141                         ;
-;         1 data inputs ; 10                          ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 7                           ;
-;         4 data inputs ; 51                          ;
-;         5 data inputs ; 19                          ;
-;         6 data inputs ; 47                          ;
-; boundary_port         ; 56                          ;
-;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 2.36                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:01     ;
-+----------------+--------------+
 
 
 +-------------------------------+
@@ -612,72 +161,44 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Mon Jun 11 09:54:59 2018
+    Info: Processing started: Mon Jun 11 10:50:53 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off fluxoDeDados -c fluxoDeDados
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file somadorbcd.vhd
     Info (12022): Found design unit 1: somadorBCD-soma File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/somadorBCD.vhd Line: 19
     Info (12023): Found entity 1: somadorBCD File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/somadorBCD.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file somador6.vhd
+    Info (12022): Found design unit 1: somador6-soma File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/somador6.vhd Line: 18
+    Info (12023): Found entity 1: somador6 File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/somador6.vhd Line: 8
 Warning (12125): Using design file fluxodedados.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: fluxoDeDados-fluxo File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 32
     Info (12023): Found entity 1: fluxoDeDados File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 8
 Info (12127): Elaborating entity "fluxoDeDados" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at fluxodedados.vhd(36): object "clock1Hz" assigned a value but never read File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 36
-Warning (10036): Verilog HDL or VHDL warning at fluxodedados.vhd(43): object "s_saida1E" assigned a value but never read File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 43
 Warning (10036): Verilog HDL or VHDL warning at fluxodedados.vhd(44): object "s_saida1F" assigned a value but never read File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 44
-Warning (10036): Verilog HDL or VHDL warning at fluxodedados.vhd(105): object "soma1C" assigned a value but never read File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 105
-Warning (10036): Verilog HDL or VHDL warning at fluxodedados.vhd(106): object "soma1D" assigned a value but never read File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 106
-Warning (10036): Verilog HDL or VHDL warning at fluxodedados.vhd(107): object "soma2C" assigned a value but never read File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 107
-Warning (10036): Verilog HDL or VHDL warning at fluxodedados.vhd(108): object "soma2D" assigned a value but never read File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 108
-Warning (10541): VHDL Signal Declaration warning at fluxodedados.vhd(112): used implicit default value for signal "load1C" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 112
-Warning (10541): VHDL Signal Declaration warning at fluxodedados.vhd(113): used implicit default value for signal "load1D" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 113
-Warning (10541): VHDL Signal Declaration warning at fluxodedados.vhd(114): used implicit default value for signal "load1E" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 114
-Warning (10541): VHDL Signal Declaration warning at fluxodedados.vhd(115): used implicit default value for signal "load1F" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 115
-Warning (10541): VHDL Signal Declaration warning at fluxodedados.vhd(118): used implicit default value for signal "load2C" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 118
-Warning (10541): VHDL Signal Declaration warning at fluxodedados.vhd(119): used implicit default value for signal "load2D" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 119
-Warning (10541): VHDL Signal Declaration warning at fluxodedados.vhd(120): used implicit default value for signal "load2E" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 120
-Warning (10541): VHDL Signal Declaration warning at fluxodedados.vhd(121): used implicit default value for signal "load2F" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 121
-Info (12128): Elaborating entity "somadorBCD" for hierarchy "somadorBCD:somadorF1" File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 198
-Warning (12125): Using design file contadordecadaupdown.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: contadorDecadaUpDown-comportamental File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/contadordecadaupdown.vhd Line: 20
-    Info (12023): Found entity 1: contadorDecadaUpDown File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/contadordecadaupdown.vhd Line: 7
-Info (12128): Elaborating entity "contadorDecadaUpDown" for hierarchy "contadorDecadaUpDown:Bloco_3A" File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 216
-Warning (10492): VHDL Process Statement warning at contadordecadaupdown.vhd(60): signal "dir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/contadordecadaupdown.vhd Line: 60
-Warning (10492): VHDL Process Statement warning at contadordecadaupdown.vhd(67): signal "dir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/contadordecadaupdown.vhd Line: 67
-Warning (10631): VHDL Process Statement warning at contadordecadaupdown.vhd(23): inferring latch(es) for signal or variable "rco", which holds its previous value in one or more paths through the process File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/contadordecadaupdown.vhd Line: 23
-Warning (12125): Using design file divisordeclock.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: divisorDeClock-comportamental File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/divisordeclock.vhd Line: 31
-    Info (12023): Found entity 1: divisorDeClock File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/divisordeclock.vhd Line: 6
-Info (12128): Elaborating entity "divisorDeClock" for hierarchy "divisorDeClock:CLOCK_DIV" File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 276
-Warning (12125): Using design file contador6.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: contador6-comportamental File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/contador6.vhd Line: 20
-    Info (12023): Found entity 1: contador6 File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/contador6.vhd Line: 7
-Info (12128): Elaborating entity "contador6" for hierarchy "contador6:Bloco_1D" File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 296
-Warning (10631): VHDL Process Statement warning at contador6.vhd(23): inferring latch(es) for signal or variable "rco", which holds its previous value in one or more paths through the process File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/contador6.vhd Line: 23
-Warning (12125): Using design file setesegmentos.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: setesegmentos-combinatorio File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/setesegmentos.vhd Line: 17
-    Info (12023): Found entity 1: setesegmentos File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/setesegmentos.vhd Line: 11
-Info (12128): Elaborating entity "setesegmentos" for hierarchy "setesegmentos:Bloco_D1" File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 381
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 7 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "metodo[0]" File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 16
-    Warning (15610): No output dependent on input pin "metodo[1]" File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 16
-    Warning (15610): No output dependent on input pin "estado[0]" File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 20
-    Warning (15610): No output dependent on input pin "estado[1]" File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 20
-    Warning (15610): No output dependent on input pin "estado[2]" File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 20
-    Warning (15610): No output dependent on input pin "estado[3]" File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 20
-    Warning (15610): No output dependent on input pin "estado[4]" File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 20
-Info (21057): Implemented 206 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 14 input pins
-    Info (21059): Implemented 42 output pins
-    Info (21061): Implemented 150 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 33 warnings
-    Info: Peak virtual memory: 4868 megabytes
-    Info: Processing ended: Mon Jun 11 09:55:31 2018
-    Info: Elapsed time: 00:00:32
-    Info: Total CPU time (on all processors): 00:01:05
+Warning (10036): Verilog HDL or VHDL warning at fluxodedados.vhd(99): object "soma_F1E" assigned a value but never read File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 99
+Warning (10036): Verilog HDL or VHDL warning at fluxodedados.vhd(103): object "soma_F2E" assigned a value but never read File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 103
+Warning (10036): Verilog HDL or VHDL warning at fluxodedados.vhd(109): object "soma1C" assigned a value but never read File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 109
+Warning (10036): Verilog HDL or VHDL warning at fluxodedados.vhd(110): object "soma1D" assigned a value but never read File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 110
+Warning (10036): Verilog HDL or VHDL warning at fluxodedados.vhd(111): object "soma2C" assigned a value but never read File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 111
+Warning (10036): Verilog HDL or VHDL warning at fluxodedados.vhd(112): object "soma2D" assigned a value but never read File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 112
+Warning (10541): VHDL Signal Declaration warning at fluxodedados.vhd(116): used implicit default value for signal "load1C" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 116
+Warning (10541): VHDL Signal Declaration warning at fluxodedados.vhd(117): used implicit default value for signal "load1D" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 117
+Warning (10541): VHDL Signal Declaration warning at fluxodedados.vhd(118): used implicit default value for signal "load1E" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 118
+Warning (10541): VHDL Signal Declaration warning at fluxodedados.vhd(119): used implicit default value for signal "load1F" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 119
+Warning (10541): VHDL Signal Declaration warning at fluxodedados.vhd(122): used implicit default value for signal "load2C" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 122
+Warning (10541): VHDL Signal Declaration warning at fluxodedados.vhd(123): used implicit default value for signal "load2D" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 123
+Warning (10541): VHDL Signal Declaration warning at fluxodedados.vhd(124): used implicit default value for signal "load2E" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 124
+Warning (10541): VHDL Signal Declaration warning at fluxodedados.vhd(125): used implicit default value for signal "load2F" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 125
+Info (12128): Elaborating entity "somadorBCD" for hierarchy "somadorBCD:somadorF1" File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 230
+Info (12128): Elaborating entity "somador6" for hierarchy "somador6:somadorF3" File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 237
+Error (10344): VHDL expression error at somador6.vhd(27): expression has 5 elements, but must have 4 elements File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/somador6.vhd Line: 27
+Error (12152): Can't elaborate user hierarchy "somador6:somadorF3" File: C:/Users/Breno/Desktop/relogioDigital/Fluxo de Dados/fluxodedados.vhd Line: 237
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 18 warnings
+    Error: Peak virtual memory: 4860 megabytes
+    Error: Processing ended: Mon Jun 11 10:51:18 2018
+    Error: Elapsed time: 00:00:25
+    Error: Total CPU time (on all processors): 00:00:57
 
 
