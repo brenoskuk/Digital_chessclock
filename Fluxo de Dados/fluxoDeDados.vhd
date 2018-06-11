@@ -245,9 +245,9 @@ begin
 	
 
 	--Jogador 1 saida da dezena de minutos (1F)
-	somadorF7: somador6 port map(s_saida1E, rco_F1E,soma_F1D, open);
+	somadorF7: somador6 port map(s_saida1E, rco_F1E,soma_F1F, open);
 		--Jogador 2 saida da dezena de segundos (2F)
-	somadorF8: somador6 port map(s_saida2E, rco_F2E,soma_F2D, open);
+	somadorF8: somador6 port map(s_saida2E, rco_F2E,soma_F2F, open);
 	
 
 	--BRONSTEIN	
@@ -359,8 +359,8 @@ begin
 	-- Bloco 2C: contador de decada das unidades 2
 	Bloco_2C: contadorDecadaUpDown port map(clk, '0', preset or (FIMJ2 and not(seletor)) , '0',
 														seletor and enable and rco2A and rco2B, load2C, rco2C, s_saida2C);
-	-- Bloco 2D: contador de decada das dezenas 2
-	Bloco_2D: contadorDecadaUpDown port map(clk, '0', preset or (FIMJ2 and not(seletor)),'0', 
+	-- Bloco 2D: contador de decada das dezenas de segundo 2
+	Bloco_2D: contador6 port map(clk, '0', preset or (FIMJ2 and not(seletor)),'0', 
 															seletor and enable and rco2A and rco2B and rco2C, load2D, rco2D, s_saida2D);
 	-- Bloco 2E: contador minutos (1 min)
 	Bloco_2E: contadorDecadaUpDown port map(clk, '0',  preset or (FIMJ2 and not(seletor)) ,'0', 
